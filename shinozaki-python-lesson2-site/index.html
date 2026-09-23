@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ef2b2d" />
+    <meta
+      name="description"
+      content="プログラミング第2回の授業資料と確認テスト"
+    />
+    <title>プログラミング 第2回｜オンライン教室</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="brand" aria-label="プログラミング 第2回">
+          <span class="brand__mark" aria-hidden="true">P</span>
+          <span>
+            <strong>プログラミング 第2回</strong>
+            <small>オンライン教室</small>
+          </span>
+        </div>
+
+        <nav class="main-nav" aria-label="学習メニュー">
+          <button class="nav-button is-active" type="button" data-view="materials" aria-current="page">
+            <span aria-hidden="true">①</span> 授業資料
+          </button>
+          <button class="nav-button" type="button" data-view="quiz">
+            <span aria-hidden="true">②</span> 確認テスト
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="view is-active" id="view-materials" data-view-panel="materials">
+        <div class="page-shell">
+          <header class="section-heading">
+            <p class="eyebrow">STEP 1</p>
+            <h1>授業資料を見る</h1>
+            <p>先生の説明を聞きながら、必要な資料を選んで確認しよう。</p>
+          </header>
+
+          <aside class="tech-nexus-note" aria-label="TechNexusの案内">
+            <div>
+              <strong>PythonのコードはTechNexusで実行します</strong>
+              <span>コードを書く画面は、授業中に先生の案内に合わせて開いてください。</span>
+            </div>
+            <a class="button button--secondary" href="https://tech-nexus.jp" target="_blank" rel="noreferrer">
+              TechNexusを開く
+            </a>
+          </aside>
+
+          <div class="material-selector" aria-label="表示する資料を選ぶ">
+            <button class="material-card is-active" type="button" data-material="guide" aria-pressed="true">
+              <span class="material-card__number">01</span>
+              <span>
+                <strong>TechNexus 利用ガイド</strong>
+                <small>ログイン方法とコード実行の手順</small>
+              </span>
+            </button>
+            <button class="material-card" type="button" data-material="lesson" aria-pressed="false">
+              <span class="material-card__number">02</span>
+              <span>
+                <strong>第2回 授業資料</strong>
+                <small>print・変数・データ型・f文字列</small>
+              </span>
+            </button>
+          </div>
+
+          <section class="document-viewer" aria-labelledby="document-title">
+            <div class="document-toolbar">
+              <div>
+                <span>表示中の資料</span>
+                <h2 id="document-title">TechNexus 利用ガイド</h2>
+              </div>
+              <div class="document-actions">
+                <a class="button button--primary" id="open-document" href="./assets/tech-nexus-guide.pdf" target="_blank" rel="noreferrer">
+                  大きく開く
+                </a>
+                <a class="button button--secondary" id="download-document" href="./assets/tech-nexus-guide.pdf" download>
+                  PDFを保存
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-frame">
+              <iframe
+                id="document-frame"
+                src="./assets/tech-nexus-guide.pdf#view=FitH"
+                title="TechNexus 利用ガイド"
+              ></iframe>
+              <p class="pdf-fallback">
+                資料が表示されない場合は、上の「大きく開く」を押してください。
+              </p>
+            </div>
+          </section>
+
+          <div class="next-step">
+            <p><strong>授業が終わったら、確認テストに進みます。</strong></p>
+            <button class="button button--primary" type="button" data-go-view="quiz">
+              確認テストへ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-quiz" data-view-panel="quiz" hidden>
+        <div class="page-shell page-shell--quiz">
+          <header class="section-heading">
+            <p class="eyebrow">STEP 2</p>
+            <h1>第2回 確認テスト</h1>
+            <p>問題文を読み、答えを入力または選択しよう。分からない問題は後に回して構いません。</p>
+          </header>
+
+          <form id="quiz-form" novalidate>
+            <div class="quiz-grid">
+              <article class="quiz-item" data-question-id="1">
+                <div class="quiz-item__heading"><span>1</span><h2>print()</h2></div>
+                <div class="quiz-item__body">
+                  <p>画面に「こんにちは」と表示したいとき、次のコードの空欄に入るコードを書きましょう。</p>
+                  <div class="code-line code-line--inline">
+                    <label class="visually-hidden" for="q1">空欄に入るコード</label>
+                    <input id="q1" name="q1" class="code-input code-input--short" type="text" autocomplete="off" spellcheck="false" />
+                    <code>("こんにちは")</code>
+                  </div>
+                  <p class="answer-feedback" data-feedback="1" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item" data-question-id="2">
+                <div class="quiz-item__heading"><span>2</span><h2>コメント</h2></div>
+                <div class="quiz-item__body">
+                  <label for="q2">コメントを書くときに使う記号を書きましょう。</label>
+                  <input id="q2" name="q2" class="text-input text-input--short" type="text" autocomplete="off" spellcheck="false" />
+                  <p class="answer-feedback" data-feedback="2" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item" data-question-id="3">
+                <div class="quiz-item__heading"><span>3</span><h2>変数</h2></div>
+                <div class="quiz-item__body">
+                  <fieldset>
+                    <legend>変数の説明として正しいものを選びましょう。</legend>
+                    <label class="choice"><input type="radio" name="q3" value="ア" /> ア　同じ命令を何度も実行する仕組み</label>
+                    <label class="choice"><input type="radio" name="q3" value="イ" /> イ　データを入れておく箱のようなもの</label>
+                    <label class="choice"><input type="radio" name="q3" value="ウ" /> ウ　プログラムの間違いを表すメッセージ</label>
+                  </fieldset>
+                  <p class="answer-feedback" data-feedback="3" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item" data-question-id="4">
+                <div class="quiz-item__heading"><span>4</span><h2>データ型</h2></div>
+                <div class="quiz-item__body">
+                  <p>文字列なら「str」、整数なら「int」と入力しましょう。</p>
+                  <div class="short-answer-list">
+                    <label><code>"こんにちは"</code><input name="q4_1" class="text-input text-input--short" type="text" autocomplete="off" spellcheck="false" /></label>
+                    <label><code>14</code><input name="q4_2" class="text-input text-input--short" type="text" autocomplete="off" spellcheck="false" /></label>
+                    <label><code>"14"</code><input name="q4_3" class="text-input text-input--short" type="text" autocomplete="off" spellcheck="false" /></label>
+                    <label><code>850</code><input name="q4_4" class="text-input text-input--short" type="text" autocomplete="off" spellcheck="false" /></label>
+                  </div>
+                  <p class="answer-feedback" data-feedback="4" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item" data-question-id="5">
+                <div class="quiz-item__heading"><span>5</span><h2>実行結果</h2></div>
+                <div class="quiz-item__body">
+                  <p>次のプログラムを実行すると、何が表示されますか。</p>
+                  <pre class="code-block"><code>print(10 + 5)
+print("10" + "5")</code></pre>
+                  <div class="result-inputs">
+                    <label>1行目<input name="q5_1" class="text-input" type="text" autocomplete="off" spellcheck="false" /></label>
+                    <label>2行目<input name="q5_2" class="text-input" type="text" autocomplete="off" spellcheck="false" /></label>
+                  </div>
+                  <p class="answer-feedback" data-feedback="5" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item" data-question-id="6">
+                <div class="quiz-item__heading"><span>6</span><h2>変数の中身</h2></div>
+                <div class="quiz-item__body">
+                  <pre class="code-block"><code>name = "野中"
+name = "市川"
+print(name)</code></pre>
+                  <label for="q6">実行結果</label>
+                  <input id="q6" name="q6" class="text-input" type="text" autocomplete="off" spellcheck="false" />
+                  <p class="answer-feedback" data-feedback="6" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item quiz-item--wide" data-question-id="7">
+                <div class="quiz-item__heading"><span>7</span><h2>エラー</h2></div>
+                <div class="quiz-item__body quiz-item__body--split">
+                  <div>
+                    <p>次のプログラムを実行すると、エラーが発生します。</p>
+                    <pre class="code-block"><code>age = 14
+print("年齢は" + age + "歳")</code></pre>
+                  </div>
+                  <div class="question-parts">
+                    <fieldset>
+                      <legend>（1）エラーになる理由</legend>
+                      <label class="choice"><input type="radio" name="q7_1" value="ア" /> ア　print()のスペルが間違っている</label>
+                      <label class="choice"><input type="radio" name="q7_1" value="イ" /> イ　文字列と整数をそのままつなげている</label>
+                    </fieldset>
+                    <fieldset>
+                      <legend>（2）エラーを直したコード</legend>
+                      <label class="choice choice--code"><input type="radio" name="q7_2" value="ア" /> <code>print("年齢は" + str(age) + "歳")</code></label>
+                      <label class="choice choice--code"><input type="radio" name="q7_2" value="イ" /> <code>print("年齢は" + int(age) + "歳")</code></label>
+                    </fieldset>
+                  </div>
+                  <p class="answer-feedback" data-feedback="7" aria-live="polite"></p>
+                </div>
+              </article>
+
+              <article class="quiz-item quiz-item--wide" data-question-id="8">
+                <div class="quiz-item__heading"><span>8</span><h2>f文字列</h2></div>
+                <div class="quiz-item__body">
+                  <p>「名前は野中です」と表示します。print()の中身を入力しましょう。</p>
+                  <pre class="code-block"><code>name = "野中"</code></pre>
+                  <div class="code-line code-line--inline code-line--long">
+                    <code>print(</code>
+                    <label class="visually-hidden" for="q8">printの中身</label>
+                    <input id="q8" name="q8" class="code-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+                    <code>)</code>
+                  </div>
+                  <p class="answer-feedback" data-feedback="8" aria-live="polite"></p>
+                </div>
+              </article>
+            </div>
+
+            <div class="quiz-submit-bar">
+              <p>全部入力できたら解答しよう。何度でもやり直せます。</p>
+              <button class="button button--run" type="submit">解答する！</button>
+            </div>
+          </form>
+
+          <section class="quiz-result" id="quiz-result" aria-live="polite" tabindex="-1" hidden>
+            <div class="quiz-result__score">
+              <span id="quiz-score">0</span><small>／8問</small>
+            </div>
+            <div>
+              <h2 id="quiz-result-title">採点結果</h2>
+              <p id="quiz-result-message"></p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
